@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Index from '@/views/Index'
+import Admin from '@/views/Admin'
 
 Vue.use(VueRouter)
 
@@ -32,6 +33,11 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/admin',
+    name: 'Admin',
+    compoent: Admin,
+  }
 ]
 
 const router = new VueRouter({

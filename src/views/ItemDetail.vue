@@ -7,6 +7,7 @@
       src="https://picsum.photos/id/11/500/300"
     ></v-img>
     <p v-text="item.title"></p>
+    <p v-text="item.description"></p>
     <v-btn
       class="ma-2"
       color="primary"
@@ -33,6 +34,7 @@ export default {
     item: {
       id: 1,
       title: 'title1',
+      description: 'desc 123123',
       rating: 1.2
     }, 
     dialog: false,

@@ -2,17 +2,7 @@
   <v-container>
     <v-list three-line>
     <template>
-      <v-list-item
-      >
-        <v-list-item-avatar>
-          <v-img src="http://placehold.it/400x200/efa/aae&text=placehold.it"></v-img>
-        </v-list-item-avatar>
-
-        <v-list-item-content>
-          <v-list-item-title v-html="123123"></v-list-item-title>
-          <v-list-item-subtitle v-html="456456"></v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
+      <BuyItem v-for="buyItem in buyItems" :key="buyItem.id" :buyItem="buyItem"></BuyItem>
     </template>
   </v-list>
   <v-form
@@ -74,6 +64,7 @@
 </template>
 
 <script>
+import BuyItem from '@/components/BuyItem';
 export default {
   data: () => ({
     valid: true,
@@ -94,13 +85,42 @@ export default {
       '경상남도',
       '경상북도',
     ],
+    
     buyer: {
       name: '',
       email: '',
       province: '',
       city: '',
-    }
+    },
+    buyItems: [
+      {
+        id: 1,
+        title: '빼빼로',
+        description: '롯데 빼빼로',
+        price: '1500'
+      },
+      {
+        id: 2,
+        title: 'test',
+        description: '롯데 빼빼로123',
+        price: '44444'
+      },
+      {
+        id: 3,
+        title: 'test4',
+        description: '롯데 빼빼로23',
+        price: '25252'
+      },
+      {
+        id: 4,
+        title: 'test2',
+        description: '롯데 빼빼로4546',
+        price: '3424'
+      },
+    ],
   }),
+
+  components: { BuyItem },
 
   methods: {
     validate () {

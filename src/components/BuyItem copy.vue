@@ -1,5 +1,5 @@
 <template>
-  <v-list-item>
+ <v-list-item>
   <template v-slot:default="{ active }">
     <v-list-item-action>
       <v-checkbox :input-value="active"></v-checkbox>
@@ -10,9 +10,9 @@
     </v-list-item-avatar>
 
     <v-list-item-content class="ml-3">
-      <v-list-item-title v-text="cartItem.title" />
-      <v-list-item-subtitle v-text="cartItem.description" />
-      <v-list-item-subtitle>가격: {{ cartItem.price }} 원</v-list-item-subtitle>
+      <v-list-item-title v-text="buyItem.title" />
+      <v-list-item-subtitle v-text="buyItem.description" />
+      <v-list-item-subtitle>가격: {{ buyItem.price }} 원</v-list-item-subtitle>
     </v-list-item-content>
   </template>
   </v-list-item>
@@ -21,7 +21,7 @@
 <script>
 export default {
   props: {
-    cartItem: {
+    buyItem: {
       type: Object,
       required: true,
     }
