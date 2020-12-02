@@ -4,7 +4,7 @@
       <div>
         <v-img
           height="250"
-          src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+          src="https://picsum.photos/seed/picsum/200/300"
         ></v-img>
 
         <router-link :to="{ name: 'ItemDetail', params: { id: item.id } }">

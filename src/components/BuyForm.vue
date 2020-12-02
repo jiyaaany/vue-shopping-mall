@@ -97,25 +97,29 @@ export default {
         id: 1,
         title: '빼빼로',
         description: '롯데 빼빼로',
-        price: '1500'
+        price: '1500',
+        quantity: 1,
       },
       {
         id: 2,
         title: 'test',
         description: '롯데 빼빼로123',
-        price: '44444'
+        price: '44444',
+        quantity: 1,
       },
       {
         id: 3,
         title: 'test4',
         description: '롯데 빼빼로23',
-        price: '25252'
+        price: '25252',
+        quantity: 1,
       },
       {
         id: 4,
         title: 'test2',
         description: '롯데 빼빼로4546',
-        price: '3424'
+        price: '3424',
+        quantity: 1,
       },
     ],
   }),
@@ -124,7 +128,9 @@ export default {
 
   methods: {
     validate () {
-      this.$refs.form.validate()
+      if (this.$refs.form.validate()) {
+        location.replace('/order/list');
+      }
     },
     reset () {
       this.$refs.form.reset()

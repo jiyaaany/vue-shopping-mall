@@ -12,6 +12,18 @@
       elevation="1"
       fab
       small
+      @click="console.log('123');"
+    >
+      <v-icon>
+        mdi-arrow-left
+      </v-icon>
+    </v-btn>
+
+    <v-btn
+      class="mr-3"
+      elevation="1"
+      fab
+      small
       @click="setDrawer(!drawer)"
     >
       <v-icon v-if="value">

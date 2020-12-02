@@ -31,6 +31,11 @@ const routes = [
         path: '/cart/list',
         component: () => import('@/views/CartList'),
       },
+      {
+        name: 'OrderList',
+        path: '/order/list',
+        component: () => import('@/views/OrderList'),
+      }
     ],
   },
   {
