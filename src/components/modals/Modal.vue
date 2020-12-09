@@ -13,7 +13,7 @@
           <v-btn
             color="green darken-1"
             text
-            @click="dialog = false"
+            @click="cancelMethod"
             v-text="cancelText"
           ></v-btn>
           <v-btn
@@ -53,6 +53,7 @@ export default {
 
     dialog: {
       type: Boolean,
+      default: false,
       require: true,
     },
 

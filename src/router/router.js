@@ -35,14 +35,14 @@ const routes = [
         name: 'OrderList',
         path: '/order/list',
         component: () => import('@/views/OrderList'),
+      },
+      {
+        name: 'Admin',
+        path: '/admin',
+        component: Admin,
       }
     ],
   },
-  {
-    path: '/admin',
-    name: 'Admin',
-    compoent: Admin,
-  }
 ]
 
 const router = new VueRouter({
