@@ -6,7 +6,7 @@
     :expand-on-hover="expandOnHover"
     :right="$vuetify.rtl"
     :src="barImage"
-    mobile-break-point="960"
+    mobile-breakpoint="960"
     app
     width="260"
     v-bind="$attrs"
@@ -47,33 +47,16 @@
 
     <v-divider class="mb-2" />
 
-    <v-list
+    <v-list 
       expand
       nav
     >
-      <!-- Style cascading bug  -->
-      <!-- https://github.com/vuetifyjs/vuetify/pull/8574 -->
-      <div />
-
-<!--      <template v-for="(item, i) in computedItems">
-        <base-item-group
-          v-if="item.children"
-          :key="`group-${i}`"
-          :item="item"
-        >
-        </base-item-group>
-
-        <base-item
-          v-else
-          :key="`item-${i}`"
-          :item="item"
-
-       </template>
-        -->        
-
-      <!-- Style cascading bug  -->
-      <!-- https://github.com/vuetifyjs/vuetify/pull/8574 -->
-      <div />
+      <v-list-item router: to='Admin'>
+        <v-list-item-icon>
+          <v-icon>mdi-account</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>관리자 상품등록</v-list-item-content>
+      </v-list-item>
     </v-list>
 
     <!-- <template v-slot:append>

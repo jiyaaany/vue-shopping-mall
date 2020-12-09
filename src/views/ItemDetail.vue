@@ -23,7 +23,8 @@
       rounded
       :to="{ name: 'BuyList' }"
     >구매하기</v-btn>
-    <Modal description="장바구니에 상품이 담겼습니다. 장바구니로 이동하실래요?" accept-text="이동" cancel-text="계속 쇼핑하기" :dialog="dialog" :accept-method="moveCart" ></Modal>
+    
+    <Modal description="장바구니에 상품이 담겼습니다. 장바구니로 이동하실래요?" accept-text="이동" cancel-text="계속 쇼핑하기" :dialog="dialog" :cancel-method="() => {dialog = false}" :accept-method="moveCart" ></Modal>
   </v-container>
 </template>
 <script>
